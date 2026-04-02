@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyful Clinics - Brand Cream Paint Reference</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #2D3142;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .subtitle { color: #666; margin-bottom: 2rem; font-size: 0.95rem; }
+    .target-swatch {
+      background: #F5EDE0;
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #e0d8cc;
+    }
+    .target-swatch span {
+      color: #2D3142;
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    .target-details {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .target-details code {
+      background: #e8e8e8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    h2 { font-size: 1.15rem; margin-bottom: 1rem; }
+    .matches {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .match-card {
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .match-swatch {
+      height: 100px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+      border-bottom: 1px solid #e0d8cc;
+    }
+    .match-swatch span {
+      color: #2D3142;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .match-info {
+      padding: 0.75rem;
+    }
+    .match-info .name { font-weight: 600; font-size: 0.95rem; }
+    .match-info .code { color: #888; font-size: 0.8rem; margin-top: 2px; }
+    .match-info .badge {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 99px;
+      text-transform: uppercase;
+    }
+    .badge-best { background: #d4edda; color: #155724; }
+    .badge-close { background: #fff3cd; color: #856404; }
+    .badge-warmer { background: #f8d7da; color: #721c24; }
+    .badge-cooler { background: #d1ecf1; color: #0c5460; }
+
+    .comparison {
+      display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 120px;
+      margin-bottom: 0.5rem;
+      border: 1px solid #e0d8cc;
+    }
+    .comparison div {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+    }
+    .comparison div span {
+      color: #2D3142;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .comparison-label {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+
+    .instructions {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .instructions h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+    .instructions ol {
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .instructions li { margin-bottom: 0.25rem; }
+    .instructions strong { color: #E0792C; }
+
+    .print-block {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .print-block h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+    .print-swatch {
+      background: #F5EDE0;
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e0d8cc;
+    }
+    .print-swatch span {
+      color: #2D3142;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .print-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    @media print {
+      body { background: #fff; padding: 1rem; }
+      .instructions, .matches, .comparison, .comparison-label, h2, .subtitle, footer { display: none; }
+      .print-block { box-shadow: none; border: 1px solid #ccc; }
+      .print-swatch { height: 400px; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Joyful Clinics - Brand Cream</h1>
+  <p class="subtitle">Paint color reference for color matching at Home Depot &mdash; Orange palette, section backgrounds</p>
+
+  <div class="target-swatch">
+    <span>#F5EDE0</span>
+  </div>
+  <div class="target-details">
+    <span>Hex: <code>#F5EDE0</code></span>
+    <span>RGB: <code>245, 237, 224</code></span>
+    <span>HSL: <code>37&deg;, 58%, 92%</code></span>
+  </div>
+
+  <h2>Closest Behr Matches (Home Depot)</h2>
+  <div class="matches">
+    <div class="match-card">
+      <div class="match-swatch" style="background: #F5EDDF;">
+        <span>#F5EDDF</span>
+      </div>
+      <div class="match-info">
+        <div class="name">Creamy White</div>
+        <div class="code">Behr YL-W03</div>
+        <span class="badge badge-best">Best Match</span>
+      </div>
+    </div>
+    <div class="match-card">
+      <div class="match-swatch" style="background: #F2E6D9;">
+        <span>#F2E6D9</span>
+      </div>
+      <div class="match-info">
+        <div class="name">Swiss Coffee</div>
+        <div class="code">Behr 12</div>
+        <span class="badge badge-close">Close &mdash; Slightly Warmer</span>
+      </div>
+    </div>
+    <div class="match-card">
+      <div class="match-swatch" style="background: #F3E8D5;">
+        <span>#F3E8D5</span>
+      </div>
+      <div class="match-info">
+        <div class="name">Cameo White</div>
+        <div class="code">Behr OC-32</div>
+        <span class="badge badge-warmer">Warmer / Yellower</span>
+      </div>
+    </div>
+    <div class="match-card">
+      <div class="match-swatch" style="background: #F7F0E5;">
+        <span>#F7F0E5</span>
+      </div>
+      <div class="match-info">
+        <div class="name">Navajo White</div>
+        <div class="code">Behr W-D-120</div>
+        <span class="badge badge-cooler">Slightly Lighter</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Side-by-Side: Brand vs Creamy White</h2>
+  <div class="comparison">
+    <div style="background: #F5EDE0;"><span>Brand #F5EDE0</span></div>
+    <div style="background: #F5EDDF;"><span>Creamy White #F5EDDF</span></div>
+  </div>
+  <p class="comparison-label">Left: Joyful Clinics brand cream &mdash; Right: Behr Creamy White YL-W03</p>
+
+  <div class="instructions">
+    <h3>How to Color Match at Home Depot</h3>
+    <ol>
+      <li>Ask for <strong>Behr Creamy White (YL-W03)</strong> &mdash; it's the closest off-the-shelf match</li>
+      <li><strong>Swiss Coffee (12)</strong> is another great option if YL-W03 isn't in stock &mdash; runs just slightly warmer</li>
+      <li>If an exact match is needed, print this page and bring it to the paint desk</li>
+      <li>Ask them to scan the large swatch below with their spectrophotometer</li>
+      <li>They can custom-mix to match &mdash; a physical print works better than a phone screen</li>
+    </ol>
+  </div>
+
+  <div class="print-block">
+    <h3>Printable Swatch (for color matching)</h3>
+    <div class="print-swatch">
+      <span>#F5EDE0</span>
+    </div>
+    <p class="print-note">Print this page on matte paper for best color-matching results. Use Ctrl/Cmd + P.</p>
+  </div>
+
+  <footer>Joyful Clinics &mdash; Practice with Joy</footer>
+
+</body>
+</html>
